@@ -1,0 +1,10 @@
+github.com/Syfaro/telegram-bot-api v4.6.4+incompatible h1:O30CgxZ/BuHpWfONoGirTIU7XUWhz6NPelk80FxipDI=
+github.com/Syfaro/telegram-bot-api v4.6.4+incompatible/go.mod h1:eC/lEGT3gOB9RowMYsLx0YH1U8a/dEjceHY3M//ej88=
+github.com/sashabaranov/go-gpt3 v0.0.0-20230128191859-3695eb3ade92 h1:bn0s4wtByB3cLYZZknK4NJG37MvojJ9o1hCzXAwpf7U=
+github.com/sashabaranov/go-gpt3 v0.0.0-20230128191859-3695eb3ade92/go.mod h1:BIZdbwdzxZbCrcKGMGH6u2eyGe1xFuX9Anmh3tCP8lQ=
+github.com/sashabaranov/go-gpt3 v1.0.0 h1:+wOQUqVpX/JVkNwPu2Il5VbCNefnn5FVKlhFIZq3aAU=
+github.com/sashabaranov/go-gpt3 v1.0.0/go.mod h1:BIZdbwdzxZbCrcKGMGH6u2eyGe1xFuX9Anmh3tCP8lQ=
+github.com/tdlib/telegram-bot-api v0.0.0-20221230220050-d091a730fb85 h1:hMmiSimizPxmQTqMecyUp0ycloPL1cz9PD52jEoWZ0I=
+github.com/tdlib/telegram-bot-api v0.0.0-20221230220050-d091a730fb85/go.mod h1:9/aOdW3ecdZtvHf2oivHzyOtndYyi8k9/YC6+D6ebBc=
+github.com/technoweenie/multipartstreamer v1.0.1 h1:XRztA5MXiR1TIRHxH2uNxXxaIkKQDeX7m2XsSOlQEnM=
+github.com/technoweenie/multipartstreamer v1.0.1/go.mod h1:jNVxdtShOxzAsukZwTSw6MDx5eUJoiEBsSvzDU9uzog=
