@@ -13,15 +13,14 @@ func telegramBot() func(func(string) string) {
 	if tokenBot == "" {
 		log.Panic("TokenTelegramBot not found.")
 	}
-	session, err := tgbotapi.NewBotAPI(tokenBot) // используя токен создаем новый инстанс бота
+	session, err := tgbotapi.NewBotAPI(tokenBot)
 	if err != nil {
 		log.Panic(err)
 	}
 	log.Printf("Authorized on account %s", session.Self.UserName)
-	newUpdate := tgbotapi.NewUpdate(0) // получчаем апдейты
+	newUpdate := tgbotapi.NewUpdate(0)
 	newUpdate.Timeout = 60
-	chanUpdates, err := session.GetUpdatesChan(newUpdate) // используя конфиг u создаем канал в который будут прилетать новые сообщения
-	// в канал chanUpdates прилетают структуры типа Update. Читываем их и обрабатываем
+	chanUpdates, err := session.GetUpdatesChan(newUpdate)
 	log.Print("Service started")
 	return func(sessionChatGPT func(string) string) {
 		var respBot string
@@ -30,17 +29,17 @@ func telegramBot() func(func(string) string) {
 			case reqBot.Message == nil:
 				continue
 			case reqBot.Message.IsCommand():
-				switch reqBot.Message.Command() { // обрабатываем команды
+				switch reqBot.Message.Command() {
 				case "start":
 					respBot = "1 2 3 Go..."
 				}
 			default:
 				respBot = sessionChatGPT(reqBot.Message.Text)
 			}
-			msgBot := tgbotapi.NewMessage(reqBot.Message.Chat.ID, respBot) // формируем ответ
+			msgBot := tgbotapi.NewMessage(reqBot.Message.Chat.ID, respBot)
 			log.Printf("[%s]->[%s] %s", reqBot.Message.From.UserName, session.Self.UserName, reqBot.Message.Text)
 			log.Printf("[%s]->[%s] %s", session.Self.UserName, reqBot.Message.From.UserName, respBot)
-			session.Send(msgBot) // отправляем копию сообщения
+			session.Send(msgBot)
 		}
 	}
 }
